@@ -16,6 +16,9 @@ dataset = pd.read_csv(
     r'D:/VS Code/Workspace/Predicting_Breast_Cancer/Data.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
+#Missing Or Null data points
+dataset.isnull().sum()
+dataset.isna().sum()
 
 # Splitting the dataset into the Training set and Test set
 X_train, X_test, y_train, y_test = train_test_split(
